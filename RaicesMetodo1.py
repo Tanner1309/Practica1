@@ -11,7 +11,7 @@ xl=int(input("Inserte el primer limite: "))
 xu=int(input("Inserte el segundo limite: "))
 #se obtiene el primer xr
 xr=(xl+xu)/2
-
+#se declara la lista donde se guardaran los valores de los errores 
 ve=[]
 while True:
     #se evalua en la funcion xl xu y xr
@@ -25,16 +25,21 @@ while True:
     elif (fxu*fxr) > 0:
         xu=xr
     xrn=(xl+xu)/2
+    #se evalua el error
     e=math.fabs(xrn-xra)
     ve.append(e)
     if e <= 0.1:
         break
     xr=(xl+xu)/2
-   
 #se muestra el grafico de error
+#se pasa la lista a arreglo
 vecE=np.array(ve)
+#se obtiene el tamano del vector 
 x= vecE.size
+#se crea el vector x
 vecX=np.arange(0,x)
+#se hace la grafica
 plt.plot(vecX,vecE)
+#se muestra la grafica
 plt.show()
 
