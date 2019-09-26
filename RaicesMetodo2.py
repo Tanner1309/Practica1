@@ -13,7 +13,7 @@ xu=int(input("Inserte el segundo limite: "))
 fxl=A*(xl*xl)+B*xl+C
 fxu=A*(xu*xu)+B*xu+C
 #se obtiene el primer xr
-xr=(fxu*(xl-xu))/(fxl-fxu)
+xr=((fxu*(xl-xu)))/(fxl-fxu)
 #se declara la lista donde se guardaran los valores de los errores 
 ve=[]
 c=0
@@ -28,13 +28,13 @@ while True:
         xl=xr
     elif (fxu*fxr) > 0:
         xu=xr
-    xrn=(fxu*(xl-xu))/(fxl-fxu)
+    xrn=((fxu*(xl-xu)))/(fxl-fxu)
     #se evalua el error
     e=math.fabs(xrn-xra)
     ve.append(e)
     if e <= 0.01:
         break
-    xr=(fxu*(xl-xu))/(fxl-fxu)
+    xr=((fxu*(xl-xu)))/(fxl-fxu)
     c=c+1
     print (c)
 #se muestra el grafico de error

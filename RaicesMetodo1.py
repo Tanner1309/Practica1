@@ -28,10 +28,10 @@ while True:
     #se evalua el error
     e=math.fabs(xrn-xra)
     ve.append(e)
-    if e <= 0.0001:
+    if e <= 0.00001:
         break
     xr=(xl+xu)/2
-#se muestra el grafico de error
+#lineas para mostrar el grafico de error
 #se pasa la lista a arreglo
 vecE=np.array(ve)
 #se obtiene el tamano del vector 

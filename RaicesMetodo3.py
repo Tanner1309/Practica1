@@ -24,7 +24,7 @@ while True:
     ve.append(e)
     if e <= 0.01:
         break
-    elif e>2:
+    elif e>1:
         print("El metodo no funciona por que diverge")
         break
     xrn=xr
