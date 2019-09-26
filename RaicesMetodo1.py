@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 #se piden los datos necesario
 print("Este programa resuelve ecuaciones cuadraticas de la forma AX^2 + BX + C ")
-A=int(input("Inserte el valor de A:"))
+A=int(input("Inserte el valor de A: "))
 B=int(input("Inserte el valor de B: "))
 C=int(input("Inserte el valor de C: "))
 xl=int(input("Inserte el primer limite: "))
@@ -31,11 +31,12 @@ while True:
     if e <= 0.00001:
         break
     xr=(xl+xu)/2
+    
 #lineas para mostrar el grafico de error
 #se pasa la lista a arreglo
 vecE=np.array(ve)
 #se obtiene el tamano del vector 
-x= vecE.size
+x=vecE.size
 #se crea el vector x
 vecX=np.arange(0,x)
 print("El resultado mas cercano es:",xr)

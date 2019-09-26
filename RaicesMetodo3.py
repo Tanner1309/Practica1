@@ -6,19 +6,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 #se piden los datos necesario
 print("Este programa resuelve ecuaciones cuadraticas de la forma AX^2 + BX + C ")
-A=int(input("Inserte el valor de A:"))
+A=int(input("Inserte el valor de A: "))
 B=int(input("Inserte el valor de B: "))
 C=int(input("Inserte el valor de C: "))
 xr=int(input("Inserte el primer punto: "))
-#se obtiene el primer xr
-xr=math.sqrt(((xr+5)/2))
+#se obtiene el primer valor
+xr=math.sqrt((B*xr)+C/A)
 #se declara la lista donde se guardaran los valores de los errores 
 ve=[]
 c=0
 while True:
     #se guarda el valor de xr para calcular el error
     xra=xr
-    xrn=math.sqrt(((xr+5)/2))
+    xrn=math.sqrt((-(B*xr)-C)/A)
     #se evalua el error
     e=math.fabs(xrn-xra)
     ve.append(e)
