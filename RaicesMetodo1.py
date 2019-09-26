@@ -20,10 +20,10 @@ while True:
     fxu=A*(xu*xu)+B*xu+C
     #se guarda el valor de xr para calcular el error
     xra=xr
-    if (fxl*fxr) > 0:
-        xl=xr
-    elif (fxu*fxr) > 0:
+    if (fxl*fxr) < 0:
         xu=xr
+    elif (fxu*fxr) < 0:
+        xl=xr
     xrn=(xl+xu)/2
     #se evalua el error
     e=math.fabs(xrn-xra)
