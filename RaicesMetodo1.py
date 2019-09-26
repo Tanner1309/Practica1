@@ -28,7 +28,7 @@ while True:
     #se evalua el error
     e=math.fabs(xrn-xra)
     ve.append(e)
-    if e <= 0.1:
+    if e <= 0.01:
         break
     xr=(xl+xu)/2
 #se muestra el grafico de error
@@ -38,6 +38,7 @@ vecE=np.array(ve)
 x= vecE.size
 #se crea el vector x
 vecX=np.arange(0,x)
+print("El resultado mas cercano es:",xr)
 #se hace la grafica
 plt.plot(vecX,vecE)
 #se muestra la grafica
