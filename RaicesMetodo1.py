@@ -42,4 +42,4 @@ vecX=np.arange(0,x)
 plt.plot(vecX,vecE)
 #se muestra la grafica
 plt.show()
-
+plt.savefig("Metodo1.png")
