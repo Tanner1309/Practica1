@@ -11,25 +11,21 @@ B=int(input("Inserte el valor de B: "))
 C=int(input("Inserte el valor de C: "))
 xr=int(input("Inserte el primer punto: "))
 #se obtiene el primer valor
-xr=math.sqrt((B*xr)+C/A)
+xr=math.sqrt((-B*xr-C)/A)
 #se declara la lista donde se guardaran los valores de los errores 
 ve=[]
 c=0
 while True:
     #se guarda el valor de xr para calcular el error
     xra=xr
-    xrn=math.sqrt((-(B*xr)-C)/A)
+    xrn=math.sqrt((-B*xr-C)/A)
     #se evalua el error
-    e=math.fabs(xrn-xra)
+    e=math.fabs(xra-xrn)
     ve.append(e)
-    if e <= 0.01:
+    if e <= 0.000001 or e == 0.0:
         break
-    elif e>1:
-        print("El metodo no funciona por que diverge")
-        break
-    xrn=xr
+    xr=xrn
     c=c+1
-    print (c)
 #se muestra el grafico de error
 #se pasa la lista a arreglo
 vecE=np.array(ve)
