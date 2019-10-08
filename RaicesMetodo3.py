@@ -35,7 +35,7 @@ x= vecE.size
 vecX=np.arange(0,x)
 print("El resultado mas cercano es:",xr)
 #se hace la grafica
-plt.plot(vecX,vecE)
+plt.plot(vecX,vecE, "go--", linewidth=2, markersize=5)
 #se muestra la grafica
 plt.show()
-plt.savefig("Metodo2.png")
+plt.savefig("Metodo3.png")
